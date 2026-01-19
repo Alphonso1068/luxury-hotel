@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>luxury Hotel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+  
+    <style>
+      html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        background: #fff;
+        color: #333;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(10, 37, 64, 0.95);
+        padding: 18px 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .logo {
+        color: #c9a24d;
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .navbar nav a {
+        color: #fff;
+        margin-left: 25px;
+        text-decoration: none;
+        font-size: 15px;
+      }
+
+      .navbar nav a:hover {
+        color: #c9a24d;
+      }
+
+      /* HERO */
+      .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('images/hero-bg.jpg');
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+      /* ROOMS SECTION */
+      .rooms {
+        padding: 80px 8%;
+        background: #f9f9f9;
+        text-align: center;
+      }
+
+      .rooms h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+
+      .rooms-subtitle {
+        color: #777;
+        margin-bottom: 50px;
+      }
+
+      .rooms-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
+
+      .room-card {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .room-card:hover {
+        transform: translateY(-8px);
+      }
+
+      .room-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .room-card h3 {
+        margin: 15px 0 5px;
+      }
+
+      .room-card p {
+        padding: 0 15px;
+        color: #666;
+      }
+
+      .price {
+        display: block;
+        margin: 15px 0;
+        font-weight: bold;
+        color: #c9a24d;
+      }
+
+      .room-card .btn {
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      /* FOOTER */
+      .footer {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.footer-column {
+    width: 100%;
+}
+
+.footer h3 {
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+  
+      .footer-box a:hover {
+        color: #fff;
+      }
+
+      .footer iframe {
+        width: 100%;
+        height: 180px;
+        border: none;
+        border-radius: 6px;
+      }
+
+      .footer .copyright {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 13px;
+        color: #777;
+      }
+
+      body {
+        padding-top: 80px;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 8%;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #0cea1f;
+      }
+
+      .navbar nav a {
+        color: #fff;
+        margin-left: 20px;
+        text-decoration: none;
+        font-size: 15px;
+      }
+
+      .navbar nav a:hover {
+        color: #c9a24d;
+      }
+
+      .nav-btn {
+        background: #c9a24d;
+        padding: 8px 15px;
+        border-radius: 4px;
+        color: #000;
+      }
+
+      /* SMOOTH ANIMATIONS */
+* {
+    scroll-behavior: smooth;
+}
+
+/* Fade in hero content */
+.hero-content {
+    animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Buttons hover */
+.btn, .nav-btn {
+    transition: all 0.3s ease;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: #d4af37;
+    color: black;
+}
+
+.btn.secondary {
+    border: 2px solid #d4af37;
+    color: #d4af37;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+
+.btn:hover, .nav-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Cards animation */
+.room-card {
+    animation: cardUp 0.8s ease forwards;
+}
+
+@keyframes cardUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.rooms-grid-container {
+    display: grid !important;
+    /* This creates 3 equal columns */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; /* Adds space between the cards */
+    padding: 40px;
+    max-width: 1200px; /* Keeps the content from stretching too wide */
+    margin: 0 auto; /* Centers the whole grid on the page */
+}
+
+.room-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden; /* Keeps the image corners rounded */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Luxury hover effect */
+.room-card:hover {
+    transform: translateY(-10px);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer {
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 60px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;   /* 🔥 THIS FIXES THE RIGHT-SIDE HIDING */
+}
+
+.footer-column {
+    flex: 1 1 250px;   /* 🔥 Allows proper wrapping */
+    min-width: 250px;
+}
+
+.footer h3 {
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+  }
+
+  /* 1. The main black background area */
+.footer {
+    background-color: #000;
+    color: white;
+    width: 100%;            /* Fills the container */
+    display: block;         /* Ensures it starts on its own line */
+    clear: both;            /* Prevents side-by-side overlapping */
+    padding: 60px 0;
+    margin-top: 50px;
+}
+
+/* 2. The container that holds your 4 boxes */
+.footer-container {
+    max-width: 1200px;      /* Prevents the text from being too wide on big screens */
+    margin: 0 auto;         /* Centers the content */
+    display: flex;          /* This makes your 4 boxes sit side-by-side */
+    flex-wrap: wrap;        /* Makes it responsive for mobile */
+    justify-content: space-between; 
+    padding: 0 20px;
+}
+
+/* 3. Styling the individual boxes */
+.footer-box {
+    flex: 1;                /* Gives each box equal space */
+    min-width: 250px;       /* Prevents boxes from getting too squashed */
+    margin: 10px;
+}
+
+/* 4. Fix for the list dots */
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box h3 {
+    color: #b58e3e;         /* Luxury Gold */
+    margin-bottom: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;  /* 🔥 THIS IS THE KEY */
+    min-height: 100vh;
+}
+
+
+.footer {
+    margin-top: auto; /* This pushes the footer to the bottom of the page */
+    width: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper {
+  flex: 1;
+}
+
+.amenities {
+    padding: 80px 8%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.amenity-card {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.amenity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #d4af37; /* The Gold highlight */
+}
+
+.amenity-card i {
+    font-size: 3rem;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.amenity-card h3 {
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.center-btn {
+    margin-top: 20px;
+}
+
+.amenity-card i.fa-wifi {
+    color: #d4af37; 
+    font-size: 3rem; 
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.amenity-card:hover i.fa-wifi {
+    transform: scale(1.1);
+    text-shadow: 0px 0px 10px rgba(212, 175, 55, 0.3);
+}
+
+    </style>
+    <link rel="stylesheet" href="footer-fix.css">
+
+  </head>
+
+  <body class="home-page">
+
+<div class="page-wrapper">
+
+  <header class="navbar">
+    <div class="logo">Luxury Hotel</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="booking.html" class="nav-btn">Book Now</a>
+      <a href="contact.html">Contact</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+  
+  <!-- HERO (ONLY ONE) -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Experience Comfort & Luxury</h1>
+      <h2>Luxury Redefined</h2>
+      <p>Experience comfort, elegance & world-class hospitality</p>
+
+      <div class="hero-buttons">
+        <a href="booking.html" class="btn primary">Book Now</a>
+        <a href="contact.html" class="btn secondary">Send Inquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="amenities">
+    <div class="container">
+        <div class="section-header">
+            <span class="sub-title">World-Class Facilities</span>
+            <h2>Our Services & Amenities</h2>
+        </div>
+
+        <div class="amenities-grid">
+            <div class="amenity-card">
+                <i class="fas fa-swimmer"></i>
+                <h3>Infinity Pool</h3>
+                <p>Enjoy a refreshing dip with a panoramic view of the city skyline.</p>
+            </div>
+            <div class="amenity-card">
+                <i class="fas fa-spa"></i>
+                <h3>Luxury Spa</h3>
+                <p>Rejuvenate your senses with our world-class massage and skin treatments.</p>
+            </div>
+            <div class="amenity-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Fine Dining</h3>
+                <p>Savor exquisite international dishes prepared by Michelin-starred chefs.</p>
+            </div>
+            <div class="amenity-card">
+                <i class="fas fa-dumbbell"></i>
+                <h3>Fitness Center</h3>
+                <p>Keep your routine with our 24/7 state-of-the-art gym equipment.</p>
+            </div>
+            <div class="amenity-card">
+                <i class="fas fa-wifi"></i>
+                <h3>High-Speed WiFi</h3>
+                <p>Stay connected with our ultra-fast, reliable internet service throughout the hotel.</p>
+            </div>
+        </div>
+
+        <div class="center-btn">
+            <a href="contact.html" class="btn primary">Inquire About Services</a>
+        </div>
+    </div>
+</section>
+
+  <!-- ROOMS -->
+  <section class="rooms">
+    <h2>Our Rooms</h2>
+    <p class="rooms-subtitle">Choose comfort that fits your lifestyle</p>
+
+    <div class="rooms-grid-container">
+      <div class="room-card">
+        <img src="images/standard-room.jpg" alt="Standard Room">
+        <h3>Standard Room</h3>
+        <p>Cozy room perfect for solo travelers or couples.</p>
+        <span class="price">From $40 / night</span>
+        <a href="booking.html" class="btn primary">Book Now</a>
+      </div>
+
+      <div class="room-card">
+        <img src="images/deluxe-room.jpg" alt="Deluxe Room">
+        <h3>Deluxe Room</h3>
+        <p>Spacious room with premium amenities and balcony.</p>
+        <span class="price">From $70 / night</span>
+        <a href="booking.html" class="btn primary">Book Now</a>
+      </div>
+
+      <div class="room-card">
+        <img src="images/executive-suite.jpg" alt="Executive Suite">
+        <h3>Executive Suite</h3>
+        <p>Luxury suite with living area and city view.</p>
+        <span class="price">From $120 / night</span>
+        <a href="booking.html" class="btn primary">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+</div> <!-- ✅ CLOSE page-wrapper HERE -->
+
+<!-- FOOTER (OUTSIDE FLEX) -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2>Luxury Hotel</h2>
+      <p>Experience comfort, elegance, and exceptional hospitality.</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li>Home</li>
+        <li>Book Now</li>
+        <li>Contact</li>
+        <li>Gallery</li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Contact</h3>
+      <p>📍 Nairobi, Kenya</p>
+      <p>📞 +254 700 000 000</p>
+      <p>✉ info@luxuryhotel.com</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Find Us</h3>
+      <iframe
+        src="https://www.google.com/maps?q=Nairobi,Kenya&output=embed"
+        style="width:100%; height:200px; border:0;"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+
+        

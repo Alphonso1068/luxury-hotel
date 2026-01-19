@@ -1,0 +1,30 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.footer {
+    background: black;
+    color: white;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-container > div {
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer h3 {
+    color: gold;
+}

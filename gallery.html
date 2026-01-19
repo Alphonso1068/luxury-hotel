@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gallery | Luxury Hotel</title>
+    <a href="gallery.html">Gallery</a>
+
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        background: #f7f7f7;
+      }
+
+      .gallery-container {
+        padding: 80px 8%;
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        color: #777;
+        margin-bottom: 50px;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .gallery-grid img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-grid img:hover {
+        transform: scale(1.05);
+      }
+
+      /* FOOTER */
+      .footer {
+        background: #111;
+        color: #ddd;
+        padding: 60px 8% 20px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+      }
+
+      .footer-box h3 {
+        color: #c9a24d;
+        margin-bottom: 15px;
+      }
+
+      .footer-box p,
+      .footer-box a {
+        color: #bbb;
+        font-size: 14px;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .footer-box a:hover {
+        color: #fff;
+      }
+
+      .footer iframe {
+        width: 100%;
+        height: 180px;
+        border: none;
+        border-radius: 6px;
+      }
+
+      .footer .copyright {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 13px;
+        color: #777;
+      }
+
+      body {
+        padding-top: 80px;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 8%;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #c9a24d;
+      }
+
+      .navbar nav a {
+        color: #fff;
+        margin-left: 20px;
+        text-decoration: none;
+        font-size: 15px;
+      }
+
+      .navbar nav a:hover {
+        color: #c9a24d;
+      }
+
+      .nav-btn {
+        background: #c9a24d;
+        padding: 8px 15px;
+        border-radius: 4px;
+        color: #000;
+      }
+
+      /* SMOOTH ANIMATIONS */
+* {
+    scroll-behavior: smooth;
+}
+
+/* Fade in hero content */
+.hero-content {
+    animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Buttons hover */
+.btn, .nav-btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover, .nav-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Cards animation */
+.room-card {
+    animation: cardUp 0.8s ease forwards;
+}
+
+@keyframes cardUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    </style>
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">Luxury Hotel</div>
+
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html" class="nav-btn">Book Now</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="gallery-container">
+      <h1>Hotel Gallery</h1>
+      <p class="subtitle">Explore our rooms, spaces, and amenities</p>
+
+      <div class="gallery-grid">
+  <img src="images/hero.jpg" alt="Hero">
+  <img src="images/hotel-view.jpg" alt="Hotel view">
+  <img src="images/room-interior.jpg" alt="Room interior">
+  <img src="images/lobby.jpg" alt="Lobby">
+  <img src="images/restaurant.jpg" alt="Restaurant">
+  <img src="images/swimming-pool.jpg" alt="Swimming pool">
+  <img src="images/hotel-exterior.jpg" alt="Hotel exterior">
+</div>
+
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-box">
+          <h3>Luxury Hotel</h3>
+          <p>Experience comfort, elegance, and exceptional hospitality.</p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="booking.html">Book Now</a>
+          <a href="contact.html">Contact</a>
+          <a href="gallery.html">Gallery</a>
+        </div>
+
+        <div class="footer-box">
+          <h3>Contact</h3>
+          <p>📍 Nairobi, Kenya</p>
+          <p>📞 +254 700 000 000</p>
+          <p>✉️ info@luxuryhotel.com</p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Find Us</h3>
+          <iframe
+            src="https://maps.google.com/maps?q=Nairobi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
+
+      <p class="copyright">© 2026 Luxury Hotel. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
